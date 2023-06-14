@@ -34,19 +34,6 @@ func (r *CmdResource) WebServiceV1Alpha1() *restful.WebService {
 	return ws
 }
 
-func (r *CmdResource) WebServiceV1Beta1() *restful.WebService {
-	ws := new(restful.WebService)
-	ws.
-		Path("/api/v1beta1/cmds").
-		Consumes(restful.MIME_OCTET).
-		Produces(restful.MIME_JSON)
-	ws.Route(ws.
-		POST("/{path}:run").
-		Filter(restful.HttpMiddlewareHandlerToFilter(httpin.NewInput(Cmd{}))).
-		To(r.runCmd))
-	return ws
-}
-
 func (r *CmdResource) runCmd(req *restful.Request, res *restful.Response) {
 	ctx := req.Request.Context()
 	cmd := ctx.Value(httpin.Input).(*Cmd)
