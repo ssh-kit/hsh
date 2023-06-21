@@ -1,2 +1,3 @@
-# batcmd
-An http service that executes commands over ssh.
+# HTTPShell
+
+An HTTP Shell service is provided via SSH.

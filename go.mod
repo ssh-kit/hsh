@@ -1,12 +1,12 @@
-module github.com/batx-dev/batcmd
+module github.com/ssh-kit/hsh
 
 go 1.20
 
 require (
 	github.com/emicklei/go-restful/v3 v3.10.2
 	github.com/ggicci/httpin v0.11.0
-	github.com/urfave/cli/v2 v2.25.6
-	golang.org/x/crypto v0.9.0
+	github.com/urfave/cli/v2 v2.25.7
+	golang.org/x/crypto v0.10.0
 )
 
 require (

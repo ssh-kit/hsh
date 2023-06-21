@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/batx-dev/batcmd/internal/cmd"
+	"github.com/ssh-kit/hsh/internal/cmd"
 )
 
 func main() {

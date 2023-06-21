@@ -6,7 +6,7 @@ import (
 
 	"github.com/emicklei/go-restful/v3"
 
-	"github.com/batx-dev/batcmd/internal/exec"
+	"github.com/ssh-kit/hsh/internal/exec"
 )
 
 func ListenAndServe(addr string, urlStr string) error {

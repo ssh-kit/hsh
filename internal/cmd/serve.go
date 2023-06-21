@@ -3,7 +3,7 @@ package cmd
 import (
 	"github.com/urfave/cli/v2"
 
-	"github.com/batx-dev/batcmd/internal/http"
+	"github.com/ssh-kit/hsh/internal/http"
 )
 
 func NewServeCommand() *cli.Command {
@@ -11,12 +11,12 @@ func NewServeCommand() *cli.Command {
 	return &cli.Command{
 		Name:    "serve",
 		Aliases: []string{"s"},
-		Usage:   "Serve BatCmd as a api server",
+		Usage:   "Serve HTTPShell as a api server",
 		Flags: []cli.Flag{
 			&cli.StringFlag{
 				Name:        "listen",
 				Aliases:     []string{"l"},
-				EnvVars:     []string{"BATCMD_LISTEN"},
+				EnvVars:     []string{"HSH_LISTEN"},
 				Destination: &cmd.listen,
 				Value:       ":8080",
 				Usage:       "The address to http listen",
@@ -24,7 +24,7 @@ func NewServeCommand() *cli.Command {
 			&cli.StringFlag{
 				Name:        "backend-url",
 				Aliases:     []string{"u"},
-				EnvVars:     []string{"BATCMD_BACKEND_URL"},
+				EnvVars:     []string{"HSH_BACKEND_URL"},
 				Destination: &cmd.backendURL,
 				Usage:       "The url to connect backend service such as ssh",
 				Required:    true,

@@ -6,8 +6,8 @@ import (
 
 func NewRootCmd() *cli.App {
 	return &cli.App{
-		Name:  "batcmd",
-		Usage: "Manage BatCmd service",
+		Name:  "hsh",
+		Usage: "Manage HTTPShell Service",
 		Commands: []*cli.Command{
 			NewServeCommand(),
 		},
